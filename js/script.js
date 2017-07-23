@@ -1,11 +1,16 @@
-<script>
+
+		var img_ori;
 		var imgs = document.getElementById('imgs').getElementsByTagName('img');
 		var slide=function(i){
 		
 		  return function(e){
 			//imgs[i].style.display='none';
-			shuiyin('output',imgs[i].src);	
 			
+			
+			shuiyin('output',imgs[i].src);  //開啟選擇的照片
+			img_ori = i+1; 					//記住相片編號
+			document.getElementById('bott').style.display = "block"; //開啟第二頁
+			document.getElementById('topp').style.display = "none";  //隱藏第一頁
 		  }
 		};
 		
@@ -20,18 +25,23 @@
 			img.onload = function(){				
 				var canvas = document.getElementById(canvasid);
 				var ctx = canvas.getContext("2d");
-				canvas.width = img.width;
+				
+				
+					
+				canvas.width = img.width;  //調整畫布大小
 				canvas.height = img.height;
+				
 				var w = canvas.width;
 				var h = canvas.height;
 				
 
 				ctx.drawImage(img,0,0,w,h);
 				ctx.font = "80px  Microsoft YaHei";
-				ctx.fillStyle = "rgba(252,255,255,0.8)";
+				ctx.fillStyle = "rgba(252,255,255,1)";
 
 				
 				document.getElementById("shuiyinBtn").onclick = function(){
+				
 				var addtext = document.getElementById("shuiyinText").value;
 				
 				
@@ -53,5 +63,7 @@
 				}
 			}
 		}
-</script>			
-	
+		
+		document.getElementById("errBtn").onclick = function(){
+		shuiyin('output',"./img/"+ img_ori +".jpg");	
+		}
