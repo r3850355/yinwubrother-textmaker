@@ -3,4 +3,11 @@
 
 
 
-#無可奉告
+# Demo: http://renzhou.tw/yinwubrother-textmaker/
+
+# 已知Bug
+#輸入數字會不能置中
+#重複點選字會疊加
+
+# 未來展望
+#直接複製到剪貼簿
