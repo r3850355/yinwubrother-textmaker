@@ -1,0 +1,69 @@
+
+<head></head>
+
+<body>
+	
+
+	<canvas id="output" >
+
+	</canvas>
+	<div>
+
+	
+	<input id="shuiyinText" value="我還不打死你" type="text" />
+	<button id="shuiyinBtn" class="mui-btn mui-btn-primary" type="button" > 來人上字</button>
+
+	</div>
+
+
+
+
+
+
+
+</body>
+
+
+<script>
+
+
+
+function shuiyin(canvasid,imgurl,addtext){
+
+
+	var img = new Image();
+	img.src = imgurl;
+	
+	img.onload = function(){
+
+		
+		
+		var canvas = document.getElementById(canvasid);
+		var ctx = canvas.getContext("2d");
+		canvas.width = img.width;
+		canvas.height = img.height;
+		var w = canvas.width;
+		var h = canvas.height;
+		
+
+		ctx.drawImage(img,0,0,w,h);
+		ctx.font = "80px  Microsoft YaHei";
+		ctx.fillStyle = "rgba(252,255,255,0.8)";
+
+		
+		document.getElementById("shuiyinBtn").onclick = function(){
+		var addtext = document.getElementById("shuiyinText").value;
+		
+		
+		var text_w,text_h,text_l
+		text_l = addtext.length;
+		text_h = h-30;
+		text_w = (w/2)- (text_l/2)*80;
+		alert(text_w);
+		ctx.fillText(addtext,text_w,text_h); //選擇位置
+		
+		}
+	}
+}
+shuiyin('output','img/1.jpg')
+</script>
