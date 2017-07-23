@@ -70,6 +70,7 @@
 			<div>
 				<input id="shuiyinText" value="" type="text" />
 				<button id="shuiyinBtn" class="mui-btn mui-btn-primary" type="button" > 來人上字</button>
+				<button id="errBtn" class="mui-btn mui-btn-primary" type="button" > 上錯字啦</button>
 				<button onclick="javascript:window.location.reload()" type="button">再做一張</button>
 				<h4>*******右鍵另存新檔喔*******</h4>
 			</div>		
@@ -90,15 +91,19 @@
 	
 	
 <script>
+
+		var img_ori;
 		var imgs = document.getElementById('imgs').getElementsByTagName('img');
 		var slide=function(i){
 		
 		  return function(e){
 			//imgs[i].style.display='none';
 			
-			shuiyin('output',imgs[i].src);
-			document.getElementById('bott').style.display = "block";
-			document.getElementById('topp').style.display = "none";
+			
+			shuiyin('output',imgs[i].src);  //開啟選擇的照片
+			img_ori = i+1; 					//記住相片編號
+			document.getElementById('bott').style.display = "block"; //開啟第二頁
+			document.getElementById('topp').style.display = "none";  //隱藏第一頁
 		  }
 		};
 		
@@ -116,7 +121,7 @@
 				
 				
 					
-				canvas.width = img.width;
+				canvas.width = img.width;  //調整畫布大小
 				canvas.height = img.height;
 				
 				var w = canvas.width;
@@ -129,6 +134,7 @@
 
 				
 				document.getElementById("shuiyinBtn").onclick = function(){
+				
 				var addtext = document.getElementById("shuiyinText").value;
 				
 				
@@ -149,6 +155,10 @@
 				
 				}
 			}
+		}
+		
+		document.getElementById("errBtn").onclick = function(){
+		shuiyin('output',"./img/"+ img_ori +".jpg");	
 		}
 </script>			
 	
