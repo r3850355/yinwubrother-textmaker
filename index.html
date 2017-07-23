@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>鸚鵡兄弟文字圖產生器</title>
+	
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="./css/new.css" type="text/css">
+
+	<!-- for mobile -->
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	
+	
+</head>
+<body>
+	
+	<div class="main"> 
+	
+		<div class="top-part" id="topp"> 
+			<h1>鸚鵡兄弟文字圖產生器</h1>
+			<hr>
+			<div id="imgs">
+				<img src="./img/1.jpg" alt="img1">
+				<img src="./img/2.jpg" alt="img2">
+				<img src="./img/3.jpg" alt="img3">
+				<img src="./img/4.jpg" alt="img4">
+				<img src="./img/5.jpg" alt="img5">
+				<img src="./img/6.jpg" alt="img6">
+				<img src="./img/7.jpg" alt="img7">
+				<img src="./img/8.jpg" alt="img8">
+				<img src="./img/9.jpg" alt="img9">
+				<img src="./img/10.jpg" alt="img10">
+				<img src="./img/11.jpg" alt="img11">
+				<img src="./img/12.jpg" alt="img12">
+				<img src="./img/13.jpg" alt="img13">
+				<img src="./img/14.jpg" alt="img14">
+				<img src="./img/15.jpg" alt="img15">
+				<img src="./img/16.jpg" alt="img16">
+				<img src="./img/17.jpg" alt="img17">
+				<img src="./img/18.jpg" alt="img18">
+				<img src="./img/19.jpg" alt="img19">
+				<img src="./img/20.jpg" alt="img20">
+				<img src="./img/21.jpg" alt="img21">
+				<img src="./img/22.jpg" alt="img22">
+				<img src="./img/23.jpg" alt="img23">
+				<img src="./img/24.jpg" alt="img24">
+				<img src="./img/25.jpg" alt="img25">
+				<img src="./img/26.jpg" alt="img26">
+				<img src="./img/27.jpg" alt="img27">
+				<img src="./img/28.jpg" alt="img28">
+				<img src="./img/29.jpg" alt="img29">
+				<img src="./img/30.jpg" alt="img30">
+				<img src="./img/31.jpg" alt="img31">
+				<img src="./img/32.jpg" alt="img32">
+				<img src="./img/33.jpg" alt="img33">
+				<img src="./img/34.jpg" alt="img34">	
+				<img src="./img/35.jpg" alt="img35">
+				<img src="./img/36.jpg" alt="img36">					
+			</div>
+		</div>
+		
+		
+		
+		<div class="bot-part" id="bott"> 
+		
+			<canvas id="output" ></canvas>
+		
+			<div>
+				<input id="shuiyinText" value="" type="text" />
+				<button id="shuiyinBtn" class="mui-btn mui-btn-primary" type="button" > 來人上字</button>
+				<button onclick="javascript:window.location.reload()" type="button">再做一張</button>
+				<h4>*******右鍵另存新檔喔*******</h4>
+			</div>		
+		</div>
+
+
+
+		
+	</div>
+	
+	
+	<footer>
+		<hr>
+		<p><a href="https://github.com/r3850355/yinwubrother-textmaker" target="_blank">GitHub</a>  *  <a href="https://www.facebook.com/Athrun.C.S" target="_blank">RenZhou</a>  *  2017   </p>
+		<tt>建議解析度 1920*1080</tt>
+	</footer>
+	
+	
+	
+<script>
+		var imgs = document.getElementById('imgs').getElementsByTagName('img');
+		var slide=function(i){
+		
+		  return function(e){
+			//imgs[i].style.display='none';
+			
+			shuiyin('output',imgs[i].src);
+			document.getElementById('bott').style.display = "block";
+			document.getElementById('topp').style.display = "none";
+		  }
+		};
+		
+		for(i=0;i<imgs.length;i++){
+		  imgs[i].onclick=slide(i);
+		}
+	
+
+		function shuiyin(canvasid,imgurl,addtext){
+			var img = new Image();
+			img.src = imgurl;	
+			img.onload = function(){				
+				var canvas = document.getElementById(canvasid);
+				var ctx = canvas.getContext("2d");
+				
+				
+					
+				canvas.width = img.width;
+				canvas.height = img.height;
+				
+				var w = canvas.width;
+				var h = canvas.height;
+				
+
+				ctx.drawImage(img,0,0,w,h);
+				ctx.font = "80px  Microsoft YaHei";
+				ctx.fillStyle = "rgba(252,255,255,1)";
+
+				
+				document.getElementById("shuiyinBtn").onclick = function(){
+				var addtext = document.getElementById("shuiyinText").value;
+				
+				
+				
+
+				
+				var text_w,text_h,text_l,text_fs
+				text_l = addtext.length; //輸入長度
+				text_fs = w/(text_l+2)  //字體大小修正
+				text_h = h*0.95;		//離圖片底部的高度
+				text_w = (w/2)- (text_l/2)*text_fs; //文字置中
+				
+				
+
+
+				ctx.font = text_fs+"px  Microsoft YaHei";//即時修正字體大小
+				ctx.fillText(addtext,text_w,text_h); //選擇位置
+				
+				}
+			}
+		}
+</script>			
+	
+	
+	
+	
+</body>
+		
+
+</html>

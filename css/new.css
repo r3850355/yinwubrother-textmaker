@@ -1,0 +1,93 @@
+
+
+
+.main{
+
+width:800px;
+height:800px;
+position:absolute;
+top:5%;
+left:30%;
+Font-family:Meiryo, Heiti TC;
+font-size:14px;
+
+
+}
+
+
+.top-part{
+text-align:center;
+height:700px;
+border: 3px #D2D2D2 solid;
+border-radius:10px;
+margin:5px 5px 5px 5px ;
+
+}
+
+.bot-part{
+text-align:center;
+height:600px;
+display:none;
+margin:5px 5px 5px 5px ;
+
+}
+
+footer{
+height: 100px;
+box-sizing: border-box;
+/* 設定footer絕對位置在底部 */
+position: absolute;
+bottom: 0;
+text-align:center;
+width: 99%;
+Font-family:Meiryo, Heiti TC;
+
+}
+
+a{
+text-decoration:none;
+color:#121212;
+}
+
+img{
+height:80px;
+border: 3px #D2D2D2 solid;
+border-radius:10px;
+margin:2px 2px 2px 2px ;
+}
+
+canvas{
+	
+margin:8px 8px 8px 8px ;	
+	
+	
+}
+
+
+
+	
+hr{
+	margin:5px 0 5px 0;
+	border:0; 
+	height:1px;
+	background-color:#D2D2D2;
+	
+}
+
+
+@media screen and (max-width: 480px) {
+
+#outdiv{ position:absolute;	left:20%; }
+
+.main {
+
+	top:10%;
+	left:18%;
+	Font-family:Meiryo, Heiti TC;
+	
+}
+
+#SeatTX a{font-size:14px;}
+
+
+}
