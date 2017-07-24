@@ -11,6 +11,8 @@
 			img_ori = i+1; 					//記住相片編號
 			document.getElementById('bott').style.display = "block"; //開啟第二頁
 			document.getElementById('topp').style.display = "none";  //隱藏第一頁
+			window.document.body.scrollTop = 0;
+			window.document.documentElement.scrollTop = 0;
 		  }
 		};
 		

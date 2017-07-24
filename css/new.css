@@ -10,7 +10,7 @@ top:5%;
 left:30%;
 Font-family:Meiryo, Heiti TC;
 font-size:14px;
-
+padding-bottom: 120px;
 
 }
 
@@ -32,14 +32,14 @@ margin:5px 5px 5px 5px ;
 
 }
 
-footer{
+.footer{
 height: 100px;
-box-sizing: border-box;
-/* 設定footer絕對位置在底部 */
+margin-top: -100px;
 position: absolute;
 bottom: 0;
+
 text-align:center;
-width: 99%;
+width: 100%;
 Font-family:Meiryo, Heiti TC;
 
 }
@@ -59,8 +59,8 @@ margin:2px 2px 2px 2px ;
 canvas{
 	
 margin:8px 8px 8px 8px ;	
-	
-	
+max-width:100%;	
+max-height:60%;	
 }
 
 
@@ -71,23 +71,146 @@ hr{
 	border:0; 
 	height:1px;
 	background-color:#D2D2D2;
+	Font-family:Meiryo, Heiti TC;
+}
+
+
+
+button{
+padding:5px 5px 5px 5px;
+border: 3px #CCBBFF solid;
+border-radius:10px;	
+background-color:#FFFFFF;
+font-family:Microsoft YaHei;	
 	
 }
 
+input{
+width:300px;
+padding:5px 5px 5px 5px;
+border: 3px #3A0088 solid;	
+border-radius:3px;		
+font-family:Microsoft YaHei;	
+}
+
+
+
+@media screen and (max-width: 1280px) {
+
+
+
+.main{
+
+width:800px;
+height:800px;
+position:absolute;
+top:5%;
+left:20%;
+Font-family:Meiryo, Heiti TC;
+font-size:14px;
+padding-bottom: 120px;
+
+}
+
+
+
+}
 
 @media screen and (max-width: 480px) {
 
-#outdiv{ position:absolute;	left:20%; }
+
 
 .main {
 
-	top:10%;
-	left:18%;
+	top:0%;
+	left:0%;
+	width:100%;
+	height:1750px;
 	Font-family:Meiryo, Heiti TC;
+	padding-bottom: 120px;
 	
 }
 
-#SeatTX a{font-size:14px;}
 
+.top-part{
+text-align:center;
+height:1750px;
+border: 3px #D2D2D2 solid;
+border-radius:10px;
+margin:5px 5px 5px 5px ;
+
+
+}
+
+.footer{
+
+height: 100px;
+margin-top: -100px;
+position: absolute;
+bottom: 0;
+
+text-align:center;
+width: 100%;
+Font-family:Meiryo, Heiti TC;
+
+}
+
+canvas{
+	
+max-width:90%;	
+	
+}
+
+
+}
+
+@media screen and (max-width: 320px) {
+
+
+
+.main {
+
+	top:0%;
+	left:0%;
+	width:100%;
+	height:2060px;
+	Font-family:Meiryo, Heiti TC;
+	padding-bottom: 120px;
+	
+}
+
+
+.top-part{
+text-align:center;
+height:2060px;
+border: 3px #D2D2D2 solid;
+border-radius:10px;
+margin:5px 5px 5px 5px ;
+
+
+}
+
+.footer{
+
+height: 100px;
+margin-top: -100px;
+position: absolute;
+bottom: 0;
+
+text-align:center;
+width: 100%;
+Font-family:Meiryo, Heiti TC;
+
+}
+
+canvas{	
+max-width:90%;	
+}
+
+
+input{
+width:80%;
+	
+}
 
 }
