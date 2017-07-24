@@ -76,7 +76,7 @@ hr{
 
 
 
-button{
+button.normal{
 padding:5px 5px 5px 5px;
 border: 3px #CCBBFF solid;
 border-radius:10px;	
@@ -84,6 +84,17 @@ background-color:#FFFFFF;
 font-family:Microsoft YaHei;	
 	
 }
+
+button.rred{
+width:200px;
+padding:5px 5px 5px 5px;
+border: 3px #FF5511 solid;
+border-radius:10px;	
+background-color:#FFFFFF;
+font-family:Microsoft YaHei;	
+
+}
+
 
 input{
 width:300px;

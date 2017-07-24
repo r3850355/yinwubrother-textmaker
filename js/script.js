@@ -1,4 +1,6 @@
 
+
+		var dl_link;
 		var img_ori;
 		var imgs = document.getElementById('imgs').getElementsByTagName('img');
 		var slide=function(i){
@@ -41,6 +43,10 @@
 				ctx.font = "80px  Microsoft YaHei";
 				ctx.fillStyle = "rgba(252,255,255,1)";
 
+
+				
+				
+				
 				
 				document.getElementById("shuiyinBtn").onclick = function(){
 				
@@ -61,6 +67,9 @@
 
 				ctx.font = text_fs+"px  Microsoft YaHei";//即時修正字體大小
 				ctx.fillText(addtext,text_w,text_h); //選擇位置
+				
+				dl_link = canvas.toDataURL();
+				document.getElementById("DL").href=dl_link;
 				
 				}
 			}
