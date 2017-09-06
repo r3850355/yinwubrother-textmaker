@@ -1,25 +1,26 @@
 
-
+body{background:#101010;color:#fff;max-height:1080px;}
 
 .main{
 
 width:800px;
-height:800px;
+height:100%;
 position:absolute;
-top:5%;
+top:0%;
 left:30%;
 Font-family:Meiryo, Heiti TC;
 font-size:14px;
-padding-bottom: 120px;
+
+background:#404040;
 
 }
 
 
 .top-part{
 text-align:center;
-height:800px;
-border: 3px #D2D2D2 solid;
-border-radius:10px;
+height:auto;
+/* border: 3px #D2D2D2 solid; */
+/* border-radius:10px; */
 margin:5px 5px 5px 5px ;
 
 }
@@ -37,7 +38,7 @@ height: 100px;
 margin-top: -100px;
 position: absolute;
 bottom: 0;
-
+color:#fff;
 text-align:center;
 width: 100%;
 Font-family:Meiryo, Heiti TC;
@@ -46,12 +47,12 @@ Font-family:Meiryo, Heiti TC;
 
 a{
 text-decoration:none;
-color:#121212;
+color:#fff;
 }
 
 img{
 height:80px;
-border: 3px #D2D2D2 solid;
+border: 1px #D2D2D2 solid;
 border-radius:10px;
 margin:2px 2px 2px 2px ;
 }
@@ -74,13 +75,20 @@ hr{
 	Font-family:Meiryo, Heiti TC;
 }
 
+.msg{
 
+text-align:center;
+width:auto;
+padding:20px;
+margin:20px;
+font-family:Microsoft YaHei;	
+	
+}
 
 button.normal{
 padding:5px 5px 5px 5px;
-border: 3px #CCBBFF solid;
+border: 2px #CCBBFF solid;
 border-radius:10px;	
-background-color:#FFFFFF;
 font-family:Microsoft YaHei;	
 	
 }
@@ -88,12 +96,13 @@ font-family:Microsoft YaHei;
 button.rred{
 width:200px;
 padding:5px 5px 5px 5px;
-border: 3px #FF5511 solid;
+border: 2px #FF5511 solid;
 border-radius:10px;	
-background-color:#FFFFFF;
+color:#00000;
 font-family:Microsoft YaHei;	
 
 }
+
 
 
 input{
@@ -113,7 +122,7 @@ font-family:Microsoft YaHei;
 .main{
 
 width:800px;
-height:800px;
+height:auto;
 position:absolute;
 top:5%;
 left:20%;
@@ -132,46 +141,16 @@ padding-bottom: 120px;
 
 
 .main {
-
 	top:0%;
 	left:0%;
 	width:100%;
-	height:1750px;
+	height:auto;
+	min-height:100%;
 	Font-family:Meiryo, Heiti TC;
-	padding-bottom: 120px;
+
 	
 }
-
-
-.top-part{
-text-align:center;
-height:1750px;
-border: 3px #D2D2D2 solid;
-border-radius:10px;
-margin:5px 5px 5px 5px ;
-
-
-}
-
-.footer{
-
-height: 100px;
-margin-top: -100px;
-position: absolute;
-bottom: 0;
-
-text-align:center;
-width: 100%;
-Font-family:Meiryo, Heiti TC;
-
-}
-
-canvas{
-	
-max-width:90%;	
-	
-}
-
+canvas{max-width:90%;}
 
 }
 
@@ -184,44 +163,13 @@ max-width:90%;
 	top:0%;
 	left:0%;
 	width:100%;
-	height:2060px;
+	height:auto;
+	min-height:100%;
 	Font-family:Meiryo, Heiti TC;
-	padding-bottom: 120px;
-	
-}
-
-
-.top-part{
-text-align:center;
-height:2060px;
-border: 3px #D2D2D2 solid;
-border-radius:10px;
-margin:5px 5px 5px 5px ;
-
 
 }
 
-.footer{
-
-height: 100px;
-margin-top: -100px;
-position: absolute;
-bottom: 0;
-
-text-align:center;
-width: 100%;
-Font-family:Meiryo, Heiti TC;
-
-}
-
-canvas{	
-max-width:90%;	
-}
-
-
-input{
-width:80%;
-	
-}
+canvas{max-width:90%;}
+input{width:80%;}
 
 }

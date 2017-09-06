@@ -6,11 +6,20 @@
 		var slide=function(i){
 		
 		  return function(e){
-			//imgs[i].style.display='none';
+			//imgs[i].style.display='none';			
+			//var imgurl = imgs[i].src;	
+			
+			//------------------------------------------更改選照片方法
+			//imgurl = imgurl.replace(/pre\//g,"");
+			//imgurl = imgurl.replace(/jpg/g,"png");
+			//
+			var imgurl = "./img/"+i+".png";
+			shuiyin('output',imgurl);  //開啟選擇的照片
+			//---------------------------------------------------------
 			
 			
-			shuiyin('output',imgs[i].src);  //開啟選擇的照片
-			img_ori = i+1; 					//記住相片編號
+			
+			img_ori = i; 					//記住相片編號
 			document.getElementById('bott').style.display = "block"; //開啟第二頁
 			document.getElementById('topp').style.display = "none";  //隱藏第一頁
 			window.document.body.scrollTop = 0;
@@ -83,7 +92,7 @@
 		}
 		
 		document.getElementById("errBtn").onclick = function(){
-		shuiyin('output',"./img/"+ img_ori +".jpg");	
+		shuiyin('output',"./img/"+ img_ori +".png");	
 		}
 		
 	
