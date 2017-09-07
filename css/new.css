@@ -8,7 +8,7 @@ height:100%;
 position:absolute;
 top:0%;
 left:30%;
-Font-family:Meiryo, Heiti TC;
+font-family:Microsoft YaHei;
 font-size:14px;
 
 background:#404040;
@@ -41,12 +41,13 @@ bottom: 0;
 color:#fff;
 text-align:center;
 width: 100%;
-Font-family:Meiryo, Heiti TC;
-
+/* Font-family:Meiryo, Heiti TC; */
+font-family:Microsoft YaHei;
 }
 
 a{
 text-decoration:none;
+font-family:Microsoft YaHei;
 color:#fff;
 }
 
@@ -81,7 +82,8 @@ text-align:center;
 width:auto;
 padding:20px;
 margin:20px;
-font-family:Microsoft YaHei;	
+font-family:Microsoft YaHei;
+	
 	
 }
 
@@ -90,6 +92,7 @@ padding:5px 5px 5px 5px;
 border: 2px #CCBBFF solid;
 border-radius:10px;	
 font-family:Microsoft YaHei;	
+background:#fff;
 	
 }
 
@@ -98,6 +101,7 @@ width:200px;
 padding:5px 5px 5px 5px;
 border: 2px #FF5511 solid;
 border-radius:10px;	
+background:#fff;
 color:#00000;
 font-family:Microsoft YaHei;	
 
@@ -113,7 +117,7 @@ border-radius:3px;
 font-family:Microsoft YaHei;	
 }
 
-
+tt{font-family:Microsoft YaHei;}
 
 @media screen and (max-width: 1280px) {
 
@@ -126,7 +130,7 @@ height:auto;
 position:absolute;
 top:5%;
 left:20%;
-Font-family:Meiryo, Heiti TC;
+font-family:Microsoft YaHei;
 font-size:14px;
 padding-bottom: 120px;
 
@@ -146,7 +150,7 @@ padding-bottom: 120px;
 	width:100%;
 	height:auto;
 	min-height:100%;
-	Font-family:Meiryo, Heiti TC;
+	font-family:Microsoft YaHei;
 
 	
 }
@@ -165,8 +169,7 @@ canvas{max-width:90%;}
 	width:100%;
 	height:auto;
 	min-height:100%;
-	Font-family:Meiryo, Heiti TC;
-
+	font-family:Microsoft YaHei;
 }
 
 canvas{max-width:90%;}

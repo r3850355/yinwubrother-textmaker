@@ -11,7 +11,12 @@
 	<meta property="og:image" content="http://renzhou.tw/yinwubrother-textmaker/img/pre2.png" />
 	<!-- CSS -->
 	<link rel="stylesheet" href="./css/new.css" type="text/css">
-	
+ 
+	<!-- 彈窗套件 -->
+	<link rel="stylesheet" href="./css/reveal.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js""></script>
+	<script type="text/javascript" src="./js/jquery.reveal.js"></script>
+
 	<!-- for mobile -->
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 	
@@ -59,7 +64,7 @@
 				<br><br>
 				<a href="" id="DL" download="鸚鵡兄弟.png" target="_blank"><button class="rred">下載圖片</button></a>
 				<br><br><br><br>
-				<p class="msg">小提醒：手機要透過瀏覽器才能下載<br><br>*感謝巴友 巴啦啦小魔仙 提供原始圖*  <br> 有其他我沒有的也歡迎提供喔 </p>
+				<p class="msg">小提醒：用FB開啟會無法下載<br><br>感謝巴友 巴啦啦小魔仙 提供原始圖<br> 有其他我沒有的也歡迎提供喔 </p>
 
 
 				<!-- vvv TEST PART START vvv -->
@@ -86,10 +91,29 @@
 		</div>
 
 		
+		<div class="reveal-modal" id="myModal">
+		<h1>Σ(°Д°; !!</h1>
+		<h3>偵測到您是用FB瀏覽器</h3>
+		<h3>FB內建瀏覽器會導致不能下載</h3>
+		<p>請利用手機內建瀏覽器或其他瀏覽器</p>
+		</div>
+
+		
+		
+		
 	</div>
 	
 	
-
+<script type="text/javascript">
+//   FB瀏覽器檢查~~~~~~~~~~~~~~
+  $(document).ready(function() {
+	var bro,isfb;
+	bro = navigator.userAgent; //偵測瀏覽器總類
+	isfb = bro.search("FB");
+	if (isfb > 0){$('#myModal').reveal();}//開啟彈跳視窗
+   });
+  
+</script>
 	
 	
 	
@@ -103,7 +127,6 @@
 
   ga('create', 'UA-103037499-1', 'auto');
   ga('send', 'pageview');
-
 </script>	
 	
 	

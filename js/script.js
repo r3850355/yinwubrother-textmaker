@@ -103,8 +103,8 @@
 			var aTmp = new Array();
 			var zStr2 = "";
 			for(i = 0; i < zStr1.length; i++) {
-				if(zStr1.charCodeAt(i) >=0 && zStr1.charCodeAt(i) <= 32) {
-					aTmp[i] = 0;   //ascii 单 32じ常睲 null
+				if(zStr1.charCodeAt(i) >=0 && zStr1.charCodeAt(i) <= 31) {
+					aTmp[i] = 0;   //ascii 单32じ常睲 null
 				} else if(zStr1.charCodeAt(i) >=33 && zStr1.charCodeAt(i) <= 126)  {
 					aTmp[i] = zStr1.charCodeAt(i) + 65248;   //asciiざ33~126ぇ丁じ65248非称锣unicode
 				} else {
