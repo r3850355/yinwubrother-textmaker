@@ -4,13 +4,13 @@ body{background:#101010;color:#fff;max-height:1080px;}
 .main{
 
 width:800px;
-height:100%;
+height:auto;
 position:absolute;
 top:0%;
-left:30%;
+left:29%;
 font-family:Microsoft YaHei;
 font-size:14px;
-
+padding-bottom: 120px;
 background:#404040;
 
 }
@@ -118,6 +118,25 @@ font-family:Microsoft YaHei;
 }
 
 tt{font-family:Microsoft YaHei;}
+@media screen and (max-width: 1366px) {
+
+
+
+.main{
+
+width:800px;
+height:auto;
+position:absolute;
+left:20%;
+font-family:Microsoft YaHei;
+font-size:14px;
+padding-bottom: 120px;
+
+}
+
+
+
+}
 
 @media screen and (max-width: 1280px) {
 
@@ -128,7 +147,6 @@ tt{font-family:Microsoft YaHei;}
 width:800px;
 height:auto;
 position:absolute;
-top:5%;
 left:20%;
 font-family:Microsoft YaHei;
 font-size:14px;

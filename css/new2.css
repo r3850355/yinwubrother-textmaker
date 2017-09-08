@@ -1,0 +1,208 @@
+
+body{width:100%;background:#101010;color:#fff;max-height:1080px;}
+
+.main{
+min-width:800px;
+min-height:80%;
+width:auto;
+height:auto;
+position:absolute;
+top:0%;
+margin-left:29%;
+margin-right:29%;
+font-family:Microsoft YaHei;
+font-size:14px;
+padding-bottom: 120px;
+background:#404040;
+
+}
+
+
+.top-part{
+text-align:center;
+height:auto;
+/* border: 3px #D2D2D2 solid; */
+/* border-radius:10px; */
+margin:5px 5px 5px 5px ;
+
+}
+
+.bot-part{
+text-align:center;
+height:600px;
+display:none;
+margin:5px 5px 5px 5px ;
+
+}
+
+.footer{
+height: 100px;
+margin-top: -100px;
+position: absolute;
+bottom: 0;
+color:#fff;
+text-align:center;
+width: 100%;
+/* Font-family:Meiryo, Heiti TC; */
+font-family:Microsoft YaHei;
+}
+
+a{
+text-decoration:none;
+font-family:Microsoft YaHei;
+color:#fff;
+}
+
+img{
+height:80px;
+border: 1px #D2D2D2 solid;
+border-radius:10px;
+margin:2px 2px 2px 2px ;
+}
+
+canvas{
+	
+margin:8px 8px 8px 8px ;	
+max-width:100%;	
+max-height:60%;	
+}
+
+
+
+	
+hr{
+	margin:5px 0 5px 0;
+	border:0; 
+	height:1px;
+	background-color:#D2D2D2;
+	Font-family:Meiryo, Heiti TC;
+}
+
+.msg{
+
+text-align:center;
+width:auto;
+padding:20px;
+margin:20px;
+font-family:Microsoft YaHei;
+	
+	
+}
+
+button.normal{
+padding:5px 5px 5px 5px;
+border: 2px #CCBBFF solid;
+border-radius:10px;	
+font-family:Microsoft YaHei;	
+background:#fff;
+	
+}
+
+button.rred{
+width:200px;
+padding:5px 5px 5px 5px;
+border: 2px #FF5511 solid;
+border-radius:10px;	
+background:#fff;
+color:#00000;
+font-family:Microsoft YaHei;	
+
+}
+
+
+#checkBox{
+	width:20px;
+	border: 2px #FF5511 solid;
+	border-radius:10px;		
+	
+}
+#shuiyinText{
+width:300px;
+padding:5px 5px 5px 5px;
+border: 3px #3A0088 solid;	
+border-radius:3px;		
+font-family:Microsoft YaHei;	
+}
+
+tt{font-family:Microsoft YaHei;}
+
+.radio{display:none}
+.radioInput{background-color:#fff;border:1px solid rgba(0,0,0,0.15);border-radius:100%;display:inline-block;height:20px;margin-right:10px;margin-top:-1px;vertical-align:middle;width:20px;line-height:1}
+.radio:checked + .radioInput:after{background-color:#000;border-radius:100%;content:"";display:inline-block;height:16px;margin:2px;width:16px}
+.checkbox.radioInput,.radio:checked + .checkbox.radioInput:after{border-radius:0}
+
+@media screen and (max-width: 1280px) {
+
+
+
+.main{
+
+
+width:auto;
+height:auto;
+position:absolute;
+margin-left:20%;
+margin-right:20%;
+font-family:Microsoft YaHei;
+font-size:14px;
+padding-bottom: 120px;
+
+}
+
+@media screen and (max-width: 720px) {
+
+
+
+.main{
+min-width:100%;
+width:auto;
+height:auto;
+position:absolute;
+margin-left:0px;
+margin-right:0px;
+font-family:Microsoft YaHei;
+font-size:14px;
+padding-bottom: 120px;
+
+}
+
+
+}
+
+@media screen and (max-width: 480px) {
+
+
+
+.main {
+	min-width:100%;
+	top:0%;
+	left:0%;
+	width:100%;
+	height:auto;
+	min-height:100%;
+	font-family:Microsoft YaHei;
+
+	
+}
+canvas{max-width:90%;}
+
+}
+
+@media screen and (max-width: 320px) {
+
+
+
+.main {
+	min-width:100%;
+	top:0%;
+	left:0%;
+	width:100%;
+	height:auto;
+	min-height:100%;
+	font-family:Microsoft YaHei;
+}
+
+canvas{max-width:90%;}
+input{width:80%;}
+
+}

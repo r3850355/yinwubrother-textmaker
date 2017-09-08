@@ -10,7 +10,7 @@
 	<meta property="og:image" content="http://renzhou.tw/yinwubrother-textmaker/img/pre.png" />
 	<meta property="og:image" content="http://renzhou.tw/yinwubrother-textmaker/img/pre2.png" />
 	<!-- CSS -->
-	<link rel="stylesheet" href="./css/new.css" type="text/css">
+	<link rel="stylesheet" href="./css/new2.css" type="text/css">
  
 	<!-- 彈窗套件 -->
 	<link rel="stylesheet" href="./css/reveal.css">
@@ -57,7 +57,12 @@
 			<canvas id="output" ></canvas>
 		
 			<div>
-				<input id="shuiyinText" value="" type="text" /><br><br>
+				<input id="shuiyinText" value="" type="text" />
+				<label class="label">
+					<input class="radio" id="checkbox" type="checkbox" name="demo-checkbox2">
+					<span class="checkbox radioInput"></span>
+				</label>
+				<br><br>
 				<button class="normal" id="shuiyinBtn" class="mui-btn mui-btn-primary" type="button" > 來人上字</button>
 				<button class="normal" id="errBtn" class="mui-btn mui-btn-primary" type="button" > 上錯字啦</button>
 				<button class="normal" onclick="javascript:window.location.reload()" type="button">再做一張</button>

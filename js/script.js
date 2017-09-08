@@ -13,7 +13,7 @@
 			//imgurl = imgurl.replace(/pre\//g,"");
 			//imgurl = imgurl.replace(/jpg/g,"png");
 			//
-			var imgurl = "./img/"+i+".png";
+			var imgurl = "./img/"+i+".jpg";
 			shuiyin('output',imgurl);  //開啟選擇的照片
 			//---------------------------------------------------------
 			
@@ -70,20 +70,25 @@
 				text_fs = w/(text_l+2);  //字體大小修正
 				text_h = h*0.95;		//離圖片底部的高度
 				//text_w = (w/2)- (text_l/2)*text_fs; //文字置中
-				text_w = (w-text_l*text_fs)/2;//更正確的算法
-				addtext = Half2Full(addtext);//半形轉全形
+				//text_w = (w-text_l*text_fs)/2;//更正確的算法
 				
-
+				//addtext = Half2Full(addtext);//半形轉全形
 				
-				
-
-				
-				
-
-
 				ctx.font = text_fs+"px  Microsoft YaHei";//即時修正字體大小
-				ctx.fillText(addtext,text_w,text_h); //選擇位置 && 上字
 				
+				
+				var lenn
+				lenn = ctx.measureText(addtext); //取得字的寬度				
+				text_w = (w-lenn.width)/2; //0908寬度算法
+				
+				if (document.getElementById("checkbox").checked == true)
+				{
+				ctx.strokeStyle="#000";
+				ctx.lineWidth=10;
+				ctx.strokeText(addtext,text_w,text_h); 			
+				}
+	
+				ctx.fillText(addtext,text_w,text_h); //選擇位置 && 上字				
 				dl_link = canvas.toDataURL();
 				document.getElementById("DL").href=dl_link;
 				
@@ -92,7 +97,7 @@
 		}
 		
 		document.getElementById("errBtn").onclick = function(){
-		shuiyin('output',"./img/"+ img_ori +".png");	
+		shuiyin('output',"./img/"+ img_ori +".jpg");	
 		}
 		
 	
