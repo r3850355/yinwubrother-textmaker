@@ -53,12 +53,16 @@
 				ctx.fillStyle = "rgba(252,255,255,1)";
 
 
-				
-				
-				
-				
-				document.getElementById("shuiyinBtn").onclick = function(){
-				
+				document.getElementById("shuiyinText").onkeypress = function(e) {
+					if(e.keyCode == 13) { //  'Enter' key
+						shuiyinBtn.dispatchEvent(new Event('click'));
+					}
+				}
+
+
+				var shuiyinBtn = document.getElementById("shuiyinBtn");
+				shuiyinBtn.onclick = function(){
+
 				var addtext = document.getElementById("shuiyinText").value;
 				
 				
@@ -95,9 +99,10 @@
 				}
 			}
 		}
-		
-		document.getElementById("errBtn").onclick = function(){
-		shuiyin('output',"./img/"+ img_ori +".jpg");	
+
+		var errBtn = document.getElementById("errBtn");
+		errBtn.onclick = function(){
+		shuiyin('output',"./img/"+ img_ori +".jpg");
 		}
 		
 	
